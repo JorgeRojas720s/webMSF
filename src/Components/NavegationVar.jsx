@@ -1,7 +1,7 @@
 export default function NavegationVar() {
   return (
-    <nav className="navbar navbar-expand-sm bg-body-tertiary">
-      <div className="container-fluid">
+    <nav className="navbar navbar-expand-sm bg-secondary ">
+      <div className="container-fluid bg-secondary">
         <a
           className="nav-link active"
           href="https://ejemplo.com"
