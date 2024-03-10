@@ -1,4 +1,5 @@
 export default function NavegationVar() {
+
   const scrollToSection = (target) => {
     let scrollTo = 0;
     
@@ -19,7 +20,7 @@ export default function NavegationVar() {
       <div className="container-fluid bg-secondary">
         <a
           className="nav-link active"
-          href="#"
+          href="Home"
           onClick={() => scrollToSection("top")} // Utilizar la función de desplazamiento para "Home"
           aria-current="page"
         >
@@ -40,7 +41,7 @@ export default function NavegationVar() {
           <div className="navbar-nav ms-auto">
             <a 
               className="nav-link" 
-              href="#" 
+              href="Contact" 
               onClick={() => scrollToSection("bottom")} // Utilizar la función de desplazamiento para "Contact"
             >
               Contact
