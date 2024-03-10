@@ -5,6 +5,7 @@ import NavegationVar from "./Components/NavegationVar";
 import Header from "./Components/Header";
 import Card from "./Components/Card";
 import Footer from "./Components/Footer";
+import Home from "./Components/Home";
 
 
 const exImage = require.context("./images", true);
@@ -12,58 +13,58 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const cards = [
   {
-    title: "Pago de Impuestos y Tasas",
+    title: "Payment of Taxes and Fees",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, rerum molestiae ut maiores ipsum porro ipsam id cum deserunt quod animi doloremque cumque exercitationem fuga recusandae, error ab labore eius.",
-    imageURL: exImage("./faucet.jpg"),
+    imageURL: exImage("./taxes.jpg"),
   },
   {
-    title: "Licencias y Permisos",
+    title: "Licenses and Permits",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, rerum molestiae ut maiores ipsum porro ipsam id cum deserunt quod animi doloremque cumque exercitationem fuga recusandae, error ab labore eius.",
-    imageURL: exImage("./faucet.jpg"),
+    imageURL: exImage("./licenses.jpg"),
   },
   {
-    title: "Gestión de Residuos",
+    title: "Waste management",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, rerum molestiae ut maiores ipsum porro ipsam id cum deserunt quod animi doloremque cumque exercitationem fuga recusandae, error ab labore eius.",
-    imageURL: exImage("./faucet.jpg"),
+    imageURL: exImage("./trash.jpg"),
   },
   {
-    title: "Registro Civil",
+    title: "Civil registration",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, rerum molestiae ut maiores ipsum porro ipsam id cum deserunt quod animi doloremque cumque exercitationem fuga recusandae, error ab labore eius.",
-    imageURL: exImage("./faucet.jpg"),
+    imageURL: exImage("./civil.jpg"),
   },
   {
-    title: "Servicios Sociales",
+    title: "Social services",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, rerum molestiae ut maiores ipsum porro ipsam id cum deserunt quod animi doloremque cumque exercitationem fuga recusandae, error ab labore eius.",
-    imageURL: exImage("./faucet.jpg"),
+    imageURL: exImage("./socialservices.jpg"),
   },
   {
-    title: "Educación",
+    title: "Education",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, rerum molestiae ut maiores ipsum porro ipsam id cum deserunt quod animi doloremque cumque exercitationem fuga recusandae, error ab labore eius.",
-    imageURL: exImage("./faucet.jpg"),
+    imageURL: exImage("./education.jpg"),
   },
   {
-    title: "Salud Pública",
+    title: "Public health",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, rerum molestiae ut maiores ipsum porro ipsam id cum deserunt quod animi doloremque cumque exercitationem fuga recusandae, error ab labore eius.",
-    imageURL: exImage("./faucet.jpg"),
+    imageURL: exImage("./health.jpg"),
   },
   {
-    title: "Seguridad Pública",
+    title: "Public security",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, rerum molestiae ut maiores ipsum porro ipsam id cum deserunt quod animi doloremque cumque exercitationem fuga recusandae, error ab labore eius.",
-    imageURL: exImage("./faucet.jpg"),
+    imageURL: exImage("./publicsecurity.jpg"),
   },
   {
-    title: "Infraestructura y Mantenimiento",
+    title: "Infrastructure and Maintenance",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, rerum molestiae ut maiores ipsum porro ipsam id cum deserunt quod animi doloremque cumque exercitationem fuga recusandae, error ab labore eius.",
-    imageURL: exImage("./faucet.jpg"),
+    imageURL: exImage("./security.jpg"),
   },
 ];
 
@@ -71,7 +72,7 @@ root.render(
   <React.StrictMode>
     <Header />
     <NavegationVar />
-
+    <Home imageURL={exImage('./municipality.jpg')} />
     <section className="container mt-5">
       <div className="row">
         {cards.map((data) => (
