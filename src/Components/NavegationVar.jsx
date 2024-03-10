@@ -1,7 +1,7 @@
 export default function NavegationVar() {
   return (
-    <nav className="navbar navbar-expand-sm bg-secondary ">
-      <div className="container-fluid bg-secondary">
+    <nav className="navbar navbar-expand-sm " style={{background: "#176B87"}}>
+      <div className="container-fluid"  style={{background: "#176B87"}}>
         <a
           className="nav-link active"
           href="https://ejemplo.com"
