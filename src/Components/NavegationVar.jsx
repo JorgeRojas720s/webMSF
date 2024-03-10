@@ -1,10 +1,26 @@
 export default function NavegationVar() {
+  const scrollToSection = (target) => {
+    let scrollTo = 0;
+    
+    if (target === "top") {
+      scrollTo = 0;
+    } else if (target === "bottom") {
+      scrollTo = document.documentElement.scrollHeight - window.innerHeight;
+    }
+
+    window.scrollTo({
+      top: scrollTo,
+      behavior: "smooth"
+    });
+  };
+
   return (
     <nav className="navbar navbar-expand-sm " style={{background: "#176B87"}}>
       <div className="container-fluid"  style={{background: "#176B87"}}>
         <a
           className="nav-link active"
-          href="https://ejemplo.com"
+          href="#"
+          onClick={() => scrollToSection("top")} // Utilizar la función de desplazamiento para "Home"
           aria-current="page"
         >
           Home
@@ -22,7 +38,11 @@ export default function NavegationVar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav ms-auto">
-            <a className="nav-link" href="https://ejemplo.com">
+            <a 
+              className="nav-link" 
+              href="#" 
+              onClick={() => scrollToSection("bottom")} // Utilizar la función de desplazamiento para "Contact"
+            >
               Contact
             </a>
             <a className="nav-link" href="https://ejemplo.com">
@@ -37,3 +57,7 @@ export default function NavegationVar() {
     </nav>
   );
 }
+
+
+
+
