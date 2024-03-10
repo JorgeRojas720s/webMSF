@@ -19,14 +19,13 @@ export default function NavegationVar() {
   return (
     <nav className="navbar navbar-expand-sm bg-secondary fixed-top mt-5">
       <div className="container-fluid">
-        <a
+        <button
           className="nav-link active"
-          href="#"
           onClick={() => scrollToSection("top")} // Utilizar la función de desplazamiento para "Home"
           aria-current="page"
         >
           Home
-        </a>
+        </button>
         <button
           className="navbar-toggler"
           type="button"
@@ -40,13 +39,12 @@ export default function NavegationVar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav ms-auto">
-            <a 
+            <button
               className="nav-link" 
-              href="#"
               onClick={() => scrollToSection("bottom")} // Utilizar la función de desplazamiento para "Contact"
             >
               Contact
-            </a>
+            </button>
             <a className="nav-link" href="https://ejemplo.com">
               About
             </a>
