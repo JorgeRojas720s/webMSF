@@ -5,6 +5,7 @@ export default function NavegationVar() {
     if (target === "top") {
       scrollTo = 0;
     } else if (target === "bottom") {
+      console.log(document.documentElement.scrollHeight - window.innerHeight);
       scrollTo = document.documentElement.scrollHeight - window.innerHeight;
     }
 
@@ -12,6 +13,7 @@ export default function NavegationVar() {
       top: scrollTo,
       behavior: "smooth"
     });
+
   };
 
   return (
