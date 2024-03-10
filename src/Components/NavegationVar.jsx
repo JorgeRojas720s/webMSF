@@ -19,7 +19,7 @@ export default function NavegationVar() {
       <div className="container-fluid">
         <a
           className="nav-link active"
-          href="https://ejemplo.com"
+          href="#"
           onClick={() => scrollToSection("top")} // Utilizar la función de desplazamiento para "Home"
           aria-current="page"
         >
@@ -40,7 +40,7 @@ export default function NavegationVar() {
           <div className="navbar-nav ms-auto">
             <a 
               className="nav-link" 
-              href="https://ejemplo.com"
+              href="#"
               onClick={() => scrollToSection("bottom")} // Utilizar la función de desplazamiento para "Contact"
             >
               Contact
