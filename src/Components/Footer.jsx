@@ -23,8 +23,6 @@ export default function Footer() {
 
               <hr className="w-100 clearfix d-md-none" />
 
-              <hr className="w-100 clearfix d-md-none" />
-
               <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
                 <h6 className="text-uppercase mb-4 font-weight-bold">
                   Helpful Links
