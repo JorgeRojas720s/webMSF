@@ -15,11 +15,11 @@ export default function NavegationVar() {
   };
 
   return (
-    <nav className="navbar navbar-expand-sm " style={{background: "#176B87"}}>
-      <div className="container-fluid"  style={{background: "#176B87"}}>
+    <nav className="navbar navbar-expand-sm bg-secondary fixed-top mt-5">
+      <div className="container-fluid">
         <a
           className="nav-link active"
-          href="#"
+          href="https://ejemplo.com"
           onClick={() => scrollToSection("top")} // Utilizar la función de desplazamiento para "Home"
           aria-current="page"
         >
@@ -40,7 +40,7 @@ export default function NavegationVar() {
           <div className="navbar-nav ms-auto">
             <a 
               className="nav-link" 
-              href="#" 
+              href="https://ejemplo.com"
               onClick={() => scrollToSection("bottom")} // Utilizar la función de desplazamiento para "Contact"
             >
               Contact
