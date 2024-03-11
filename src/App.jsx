@@ -84,7 +84,7 @@ function App() {
       {showMain === true && (
         <>
           <div className="row ">
-            <Home imageURL={exImage("./municipality.jpg")} />
+            <Home imageURL={exImage("./municipa.jpg")} />
 
             <section className="container mt-5">
               <div className="row mt-5">
