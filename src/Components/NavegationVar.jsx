@@ -1,4 +1,5 @@
 export default function NavegationVar() {
+
   const scrollToSection = (target) => {
     let scrollTo = 0;
     
