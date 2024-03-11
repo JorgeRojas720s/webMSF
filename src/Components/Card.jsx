@@ -13,7 +13,7 @@ export default function Card(props) {
             {props.description}
           </p>
           <button  className="btn btn-primary" onClick={() => props.go(props.cardInfo)}>
-            Go
+          <i class="fa-solid fa-arrow-right"> Go</i>
           </button>
         </div>
       </div>

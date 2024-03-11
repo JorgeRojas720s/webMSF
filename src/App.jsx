@@ -88,7 +88,9 @@ function App() {
           <section className="container mt-5">
             <div className="row ">
               <Home imageURL={exImage("./municipa.jpg")} />
-              <h2 className="mt-4 p-3 text-center">Services</h2>
+              <h2 className="mt-4 p-3 text-center fw-bold text-primary animate__animated animate__heartBeat">
+                Services
+              </h2>
               <section className="container mt-5">
                 <div className="row">
                   {cards.map((data) => (

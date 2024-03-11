@@ -1,34 +1,35 @@
 export default function NavegationVar() {
-
   const scrollToSection = (target) => {
     let scrollTo = 0;
-    
+
     if (target === "top") {
       scrollTo = 0;
     } else if (target === "bottom") {
-      console.log(document.documentElement.scrollHeight - window.innerHeight)
+      console.log(document.documentElement.scrollHeight - window.innerHeight);
       scrollTo = document.documentElement.scrollHeight - window.innerHeight;
-    }else if(target === "medium"){
-      scrollTo = window.innerHeight/ 2;
+    } else if (target === "medium") {
+      scrollTo = window.innerHeight / 2;
     }
 
     window.scrollTo({
       top: scrollTo,
       medium: scrollTo,
-      behavior: "smooth"
+      behavior: "smooth",
     });
-
   };
 
   return (
-    <nav className="navbar navbar-expand-sm fixed-top" style={{background: '#176B87'}}>
+    <nav
+      className="navbar navbar-expand-sm fixed-top"
+      style={{ background: "#176B87" }}
+    >
       <div className="container-fluid">
         <button
           className="nav-link active"
-          onClick={() => scrollToSection("top")} 
+          onClick={() => scrollToSection("top")}
           aria-current="page"
         >
-          Home
+          <i class="fa-solid fa-house"> Home</i>
         </button>
         <button
           className="navbar-toggler"
@@ -44,14 +45,16 @@ export default function NavegationVar() {
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav ms-auto">
             <button
-              className="nav-link" 
-              onClick={() => scrollToSection("bottom")} 
+              className="nav-link"
+              onClick={() => scrollToSection("medium")}
             >
-              Contact
+            <i class="fa-solid fa-handshake"> Services</i>
             </button>
-            <button className="nav-link" onClick={() => scrollToSection("medium")} >
-          
-              About
+            <button
+              className="nav-link"
+              onClick={() => scrollToSection("bottom")}
+            >
+              <i class="fa-solid fa-address-book">  Contact</i>
             </button>
           </div>
         </div>
@@ -59,7 +62,3 @@ export default function NavegationVar() {
     </nav>
   );
 }
-
-
-
-
