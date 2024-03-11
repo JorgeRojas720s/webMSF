@@ -1,4 +1,4 @@
-export default function NavegationVar() {
+export default function NavegationVar(props) {
   const scrollToSection = (target) => {
     let scrollTo = 0;
 
@@ -48,7 +48,7 @@ export default function NavegationVar() {
               className="nav-link"
               onClick={() => scrollToSection("medium")}
             >
-            <i class="fa-solid fa-handshake"> Services</i>
+            <i class="fa-solid fa-handshake"> {props.name}</i>
             </button>
             <button
               className="nav-link"

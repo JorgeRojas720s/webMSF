@@ -1,8 +1,8 @@
 export default function Card(props) {
   
   return (
-    <div className=" col-sm-12 col-md-6 col-xl-4">
-      <div className="card border-0">
+    <div className=" col-sm-12 col-md-6 col-xl-4 my-3">
+      <div className="card border-0" style={{background: "#435585", color: "#fff"}}>
         <div className="col-sm-9 col-md-9 col-xxl-9"> 
         <img src={props.imageUrl} className="card-img-top rounded-pill" alt="faucet" />
         </div>

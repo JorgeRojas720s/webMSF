@@ -5,8 +5,9 @@ import NavegationVar from "./Components/NavegationVar";
 import Card from "./Components/Card";
 import Footer from "./Components/Footer";
 import Home from "./Components/Home";
-import "@fortawesome/fontawesome-free/css/all.min.css";
 import Form from "./Components/Form";
+import Carousel from "./Components/Carousel";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const exImage = require.context("./images", true);
 
@@ -70,25 +71,26 @@ const cards = [
 function App() {
   const [showMain, setShowMain] = useState(true);
   const [infoCard, setCardInfo] = useState(Object);
+  const [nameService, setNameService] = useState("Services");
 
   const clickOnGoButton = (cardInfo) => {
     console.log("info Caarta", cardInfo);
     setCardInfo(cardInfo);
-
+    setNameService("Form");
     setShowMain(false);
   };
 
   return (
     <>
       {/* <Header /> */}
-      <NavegationVar />
+      <NavegationVar name={nameService} />
 
       {showMain === true && (
         <>
           <section className="container mt-5">
             <div className="row ">
-              <Home imageURL={exImage("./municipa.jpg")} />
-              <h2 className="mt-4 p-3 text-center fw-bold text-primary animate__animated animate__heartBeat">
+              <Home imageURL={exImage("./municipality.jpg")} />
+              <h2 className="mt-4 pt-4 text-center fw-bold text-light animate__animated animate__heartBeat">
                 Services
               </h2>
               <section className="container mt-5">
@@ -106,6 +108,11 @@ function App() {
                 </div>
               </section>
             </div>
+            <Carousel
+              image1={exImage("./meetingRoom.jpg")}
+              image2={exImage("./hallways.jpg")}
+              image3={exImage("./waitingRoom.jpg")}
+            />
           </section>
         </>
       )}
@@ -130,7 +137,6 @@ function App() {
           </section>
         </>
       )}
-
       <Footer />
     </>
   );
