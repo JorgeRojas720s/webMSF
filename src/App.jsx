@@ -5,6 +5,7 @@ import Header from "./Components/Header";
 import Card from "./Components/Card";
 import Footer from "./Components/Footer";
 import Home from "./Components/Home";
+import Form from "./Components/Form"
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const exImage = require.context("./images", true);
@@ -93,6 +94,7 @@ function App() {
                 <Card
                   key={data.title}
                   name={data.title}
+                  description={data.description}
                   imageUrl={data.imageURL}
                   cardInfo={data}
                   go={clickOnGoButton}
@@ -111,6 +113,7 @@ function App() {
                 <img src={infoCard.imageURL} className="card-img-top rounded-pill mt-5" alt={infoCard.title} />
                 <h2 className="mt-5 text-center">{infoCard.title}</h2>
                 <p className="text-center">{infoCard.description}</p>
+                <Form/>
               </div>
             </div>
           </section>

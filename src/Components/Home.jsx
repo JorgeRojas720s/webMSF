@@ -1,10 +1,10 @@
 export default function Home(props) {
     return (
-        <div className="container-fluid vh-100 d-flex align-items-center justify-content-center">
+        <div className="container-fluid vh-100 d-flex align-items-center justify-content-center my-5">
         <div className="row">
             <div className="col-md-6 d-flex justify-content-center align-items-center mt-5"> 
             <div className="mt-5">
-            <img src={props.imageURL} alt="Welcome" className="img-fluid rounded mt-5" height={500} width={500} style={{ borderRadius: '20px', position: 'relative', bottom: 0  }} />
+            <img src={props.imageURL} alt="Welcome" className="img-fluid rounded mt-5" height={200} width={500} style={{ borderRadius: '20px', position: 'relative', bottom: 0, height: "80vh" }} />
             </div>
             </div>
             <div className="col-md-6 d-flex justify-content-center align-items-center"> 

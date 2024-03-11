@@ -6,11 +6,15 @@ export default function NavegationVar() {
     if (target === "top") {
       scrollTo = 0;
     } else if (target === "bottom") {
+      console.log(document.documentElement.scrollHeight - window.innerHeight)
       scrollTo = document.documentElement.scrollHeight - window.innerHeight;
+    }else if(target === "medium"){
+      scrollTo = window.innerHeight/ 2;
     }
 
     window.scrollTo({
       top: scrollTo,
+      medium: scrollTo,
       behavior: "smooth"
     });
 
@@ -21,7 +25,7 @@ export default function NavegationVar() {
       <div className="container-fluid">
         <button
           className="nav-link active"
-          onClick={() => scrollToSection("top")} // Utilizar la función de desplazamiento para "Home"
+          onClick={() => scrollToSection("top")} 
           aria-current="page"
         >
           Home
@@ -41,13 +45,14 @@ export default function NavegationVar() {
           <div className="navbar-nav ms-auto">
             <button
               className="nav-link" 
-              onClick={() => scrollToSection("bottom")} // Utilizar la función de desplazamiento para "Contact"
+              onClick={() => scrollToSection("bottom")} 
             >
               Contact
             </button>
-            <a className="nav-link" href="https://ejemplo.com">
+            <button className="nav-link" onClick={() => scrollToSection("medium")} >
+          
               About
-            </a>
+            </button>
             <a className="nav-link" href="https://www.youtube.com/watch?v=m1BykHzDOxI">
               Fabian playo
             </a>
