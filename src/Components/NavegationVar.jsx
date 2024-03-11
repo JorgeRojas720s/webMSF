@@ -21,7 +21,7 @@ export default function NavegationVar() {
   };
 
   return (
-    <nav className="navbar navbar-expand-sm fixed-top mt-5" style={{background: '#176B87'}}>
+    <nav className="navbar navbar-expand-sm fixed-top my-5" style={{background: '#176B87'}}>
       <div className="container-fluid">
         <button
           className="nav-link active"

@@ -68,7 +68,6 @@ const cards = [
 ];
 
 function App() {
-
   const [showMain, setShowMain] = useState(true);
   const [infoCard, setCardInfo] = useState(Object);
 
@@ -86,7 +85,8 @@ function App() {
 
       {showMain === true && (
         <>
-          <Home imageURL={exImage("./municipality.jpg")} />
+          <div className="row ">
+            <Home imageURL={exImage("./municipa.jpg")} />
 
           <section className="container mt-5">
             <div className="row">
@@ -102,6 +102,21 @@ function App() {
               ))}
             </div>
           </section>
+            <section className="container mt-5">
+              <div className="row mt-5">
+                {cards.map((data) => (
+                  <Card
+                    key={data.title}
+                    name={data.title}
+                    imageUrl={data.imageURL}
+                    description={data.description}
+                    cardInfo={data}
+                    go={clickOnGoButton}
+                  />
+                ))}
+              </div>
+            </section>
+          </div>
         </>
       )}
 
@@ -110,7 +125,11 @@ function App() {
           <section className="container mt-5">
             <div className="row">
               <div className="col mt-5">
-                <img src={infoCard.imageURL} className="card-img-top rounded-pill mt-5" alt={infoCard.title} />
+                <img
+                  src={infoCard.imageURL}
+                  className="card-img-top rounded-pill mt-5"
+                  alt={infoCard.title}
+                />
                 <h2 className="mt-5 text-center">{infoCard.title}</h2>
                 <p className="text-center">{infoCard.description}</p>
                 <Form/>
