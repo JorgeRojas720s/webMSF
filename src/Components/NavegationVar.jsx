@@ -5,7 +5,6 @@ export default function NavegationVar() {
     if (target === "top") {
       scrollTo = 0;
     } else if (target === "bottom") {
-      console.log(document.documentElement.scrollHeight - window.innerHeight);
       scrollTo = document.documentElement.scrollHeight - window.innerHeight;
     }
 
@@ -17,7 +16,7 @@ export default function NavegationVar() {
   };
 
   return (
-    <nav className="navbar navbar-expand-sm bg-secondary fixed-top mt-5">
+    <nav className="navbar navbar-expand-sm fixed-top mt-5" style={{background: '#176B87'}}>
       <div className="container-fluid">
         <button
           className="nav-link active"

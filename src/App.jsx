@@ -1,4 +1,5 @@
 import "./App.css";
+import { useState } from "react";
 import NavegationVar from "./Components/NavegationVar";
 import Header from "./Components/Header";
 import Card from "./Components/Card";
@@ -66,23 +67,58 @@ const cards = [
 ];
 
 function App() {
+
+  const [showMain, setShowMain] = useState(true);
+  const [infoCard, setCardInfo] = useState(Object);
+
+  const clickOnGoButton = (cardInfo) => {
+    console.log("info Caarta", cardInfo);
+    setCardInfo(cardInfo);
+
+    setShowMain(false);
+  };
+
   return (
-    <div>
+    <>
       <Header />
       <NavegationVar />
 
-      <Home imageURL={exImage("./municipality.jpg")} />
+      {showMain === true && (
+        <>
+          <Home imageURL={exImage("./municipality.jpg")} />
 
-      <section className="container mt-5">
-        <div className="row">
-          {cards.map((data) => (
-            <Card key={data.title} name={data.title} imageUrl={data.imageURL} />
-          ))}
-        </div>
-      </section>
+          <section className="container mt-5">
+            <div className="row">
+              {cards.map((data) => (
+                <Card
+                  key={data.title}
+                  name={data.title}
+                  imageUrl={data.imageURL}
+                  cardInfo={data}
+                  go={clickOnGoButton}
+                />
+              ))}
+            </div>
+          </section>
+        </>
+      )}
+
+      {showMain === false && (
+        <>
+          <section className="container mt-5">
+            <div className="row">
+              <div className="col mt-5">
+                <img src={infoCard.imageURL} className="card-img-top rounded-pill mt-5" alt={infoCard.title} />
+                <h2 className="mt-5 text-center">{infoCard.title}</h2>
+                <p className="text-center">{infoCard.description}</p>
+              </div>
+            </div>
+          </section>
+        </>
+      )}
 
       <Footer />
-    </div>
+    </>
   );
 }
 

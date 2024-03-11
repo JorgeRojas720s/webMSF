@@ -3,7 +3,7 @@ export default function Home(props) {
         <div className="container-fluid vh-100 d-flex align-items-center justify-content-center">
         <div className="row">
             <div className="col-md-6 d-flex justify-content-center align-items-center"> 
-            <img src={props.imageURL} alt="Welcome" className="img-fluid rounded" height={500} width={500} style={{ borderRadius: '20px' }} />
+            <img src={props.imageURL} alt="Welcome" className="img-fluid" height={500} width={500} style={{ borderRadius: '20px' }} />
             </div>
             <div className="col-md-6 d-flex justify-content-center align-items-center"> 
             <div>
