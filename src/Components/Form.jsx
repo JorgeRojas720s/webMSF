@@ -8,7 +8,7 @@ const Form = () => {
 
   return (
     <div className="container mt-5">
-      <h2>Municipality Form</h2>
+      <h2 className="text-center">Municipality Form</h2>
       <form className="mt-5" onSubmit={handleSubmit}>
         <div className="row">
           <div className="col-md-3"></div>{" "}

@@ -62,8 +62,7 @@ export default function Footer() {
                   Contact
                 </h6>
                 <p>
-                  <i className="fas fa-home mr-3 mt-2"></i> Nueva York, NY
-                  10012, EE. UU.
+                  <i className="fa-solid fa-location-dot"></i> San José, Costa Rica.
                 </p>
                 <p>
                   <i className="fas fa-envelope mr-3 mt-2"></i>{" "}
@@ -71,10 +70,6 @@ export default function Footer() {
                 </p>
                 <p>
                   <i className="fas fa-phone mr-3 mt-2"></i> +506 6142 2797
-                </p>
-                <p>
-                  <i className="fa-brands fa-github mr-3 mt-2"></i>{" "}
-                  JorgeRojas720s
                 </p>
               </div>
             </div>
@@ -103,11 +98,11 @@ export default function Footer() {
                 </a>
 
                 <a
-                  href="https://www.google.co.uk/"
+                  href="https://github.com/JorgeRojas720s"
                   className="btn btn-outline-light btn-floating m-1"
                   role="button"
                 >
-                  <i className="fab fa-google"></i>
+                  <i className="fa-brands fa-github"></i>
                 </a>
 
                 <a

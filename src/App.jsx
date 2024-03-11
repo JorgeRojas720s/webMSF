@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import NavegationVar from "./Components/NavegationVar";
-import Header from "./Components/Header";
+// import Header from "./Components/Header";
 import Card from "./Components/Card";
 import Footer from "./Components/Footer";
 import Home from "./Components/Home";
@@ -80,29 +80,31 @@ function App() {
 
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <NavegationVar />
 
       {showMain === true && (
         <>
-          <div className="row ">
-            <Home imageURL={exImage("./municipa.jpg")} />
-
           <section className="container mt-5">
-            <div className="row">
-              {cards.map((data) => (
-                <Card
-                  key={data.title}
-                  name={data.title}
-                  description={data.description}
-                  imageUrl={data.imageURL}
-                  cardInfo={data}
-                  go={clickOnGoButton}
-                />
-              ))}
+            <div className="row ">
+              <Home imageURL={exImage("./municipa.jpg")} />
+              <h2 className="mt-4 p-3 text-center">Services</h2>
+              <section className="container mt-5">
+                <div className="row">
+                  {cards.map((data) => (
+                    <Card
+                      key={data.title}
+                      name={data.title}
+                      description={data.description}
+                      imageUrl={data.imageURL}
+                      cardInfo={data}
+                      go={clickOnGoButton}
+                    />
+                  ))}
+                </div>
+              </section>
             </div>
           </section>
-          </div>
         </>
       )}
 
@@ -110,15 +112,17 @@ function App() {
         <>
           <section className="container mt-5">
             <div className="row">
-              <div className="col mt-5">
-                <img
-                  src={infoCard.imageURL}
-                  className="card-img-top rounded-pill mt-5"
-                  alt={infoCard.title}
-                />
+              <div className="">
+                <div className="col-xl-5 mx-auto">
+                  <img
+                    src={infoCard.imageURL}
+                    className="card-img-top rounded-pill mt-5"
+                    alt={infoCard.title}
+                  />
+                </div>
                 <h2 className="mt-5 text-center">{infoCard.title}</h2>
                 <p className="text-center">{infoCard.description}</p>
-                <Form/>
+                <Form />
               </div>
             </div>
           </section>
