@@ -102,20 +102,6 @@ function App() {
               ))}
             </div>
           </section>
-            <section className="container mt-5">
-              <div className="row mt-5">
-                {cards.map((data) => (
-                  <Card
-                    key={data.title}
-                    name={data.title}
-                    imageUrl={data.imageURL}
-                    description={data.description}
-                    cardInfo={data}
-                    go={clickOnGoButton}
-                  />
-                ))}
-              </div>
-            </section>
           </div>
         </>
       )}
