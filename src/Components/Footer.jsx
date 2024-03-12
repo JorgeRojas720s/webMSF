@@ -3,7 +3,7 @@ export default function Footer() {
     <div className="container my-5">
       <footer
         className="text-center text-lg-start text-white"
-        style={{ backgroundColor: "#04364A" }}
+        style={{ backgroundColor: "#071F40" }}
       >
         <div className="container p-4 pb-0">
           <section className="">

@@ -15,55 +15,55 @@ const cards = [
   {
     title: "Payment of Taxes and Fees",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, rerum molestiae ut maiores ipsum porro ipsam id cum deserunt quod animi doloremque cumque exercitationem fuga recusandae, error ab labore eius.",
+      "Meet your financial obligations quickly and easily. Our tax payment service gives you an easy way to contribute to the development of our community. Make your contribution comfortably at Municipalidad Reds!",
     imageURL: exImage("./taxes.jpg"),
   },
   {
     title: "Licenses and Permits",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, rerum molestiae ut maiores ipsum porro ipsam id cum deserunt quod animi doloremque cumque exercitationem fuga recusandae, error ab labore eius.",
+      "We simplify your procedures. From business licenses to construction permits, at Municipalidad Reds, we facilitate the process so you can move forward with your projects quickly and without complications.",
     imageURL: exImage("./licenses.jpg"),
   },
   {
     title: "Waste management",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, rerum molestiae ut maiores ipsum porro ipsam id cum deserunt quod animi doloremque cumque exercitationem fuga recusandae, error ab labore eius.",
+      "Keep our community clean and sustainable with our service. We make collection and recycling simple. At Municipalidad Reds, we work for a healthier environment. Easily participate in waste management!",
     imageURL: exImage("./trash.jpg"),
   },
   {
     title: "Civil registration",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, rerum molestiae ut maiores ipsum porro ipsam id cum deserunt quod animi doloremque cumque exercitationem fuga recusandae, error ab labore eius.",
+      "We simplify the registration of vital events in our community. From births to deaths, our service guarantees accurate documentation. At Municipalidad Reds, we preserve stories efficiently and reliably. Record vital events easily with us!",
     imageURL: exImage("./civil.jpg"),
   },
   {
     title: "Social services",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, rerum molestiae ut maiores ipsum porro ipsam id cum deserunt quod animi doloremque cumque exercitationem fuga recusandae, error ab labore eius.",
+      "We support the community with comprehensive programs. From financial assistance to community support, at Municipalidad Reds we strengthen the safety net for everyone. Discover how our services make a difference in your life and in the community. We are here to support you.",
     imageURL: exImage("./socialservices.jpg"),
   },
   {
     title: "Education",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, rerum molestiae ut maiores ipsum porro ipsam id cum deserunt quod animi doloremque cumque exercitationem fuga recusandae, error ab labore eius.",
+      "We promote quality education in our community. From municipal schools to educational programs, at Municipalidad Reds we prioritize academic development. Discover how our services contribute to student success. We work together to build a bright educational future.",
     imageURL: exImage("./education.jpg"),
   },
   {
     title: "Public health",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, rerum molestiae ut maiores ipsum porro ipsam id cum deserunt quod animi doloremque cumque exercitationem fuga recusandae, error ab labore eius.",
+      "We promote community health with preventive initiatives and services. From programs to prevention services, at Municipalidad Reds we are committed to well-being. Find out how we contribute to a healthier community. We work together to strengthen everyone's health.",
     imageURL: exImage("./health.jpg"),
   },
   {
     title: "Public security",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, rerum molestiae ut maiores ipsum porro ipsam id cum deserunt quod animi doloremque cumque exercitationem fuga recusandae, error ab labore eius.",
+      "We ensure the tranquility of the community with security services. From police presence to prevention initiatives, at Municipalidad Reds we work to create a safe environment. Find out how we contribute to the protection of everyone. Together, we build a safe community.",
     imageURL: exImage("./publicsecurity.jpg"),
   },
   {
     title: "Infrastructure and Maintenance",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, rerum molestiae ut maiores ipsum porro ipsam id cum deserunt quod animi doloremque cumque exercitationem fuga recusandae, error ab labore eius.",
+      "We optimize and take care of our community. From streets to infrastructure projects, at Municipalidad Reds, we keep our environment in optimal conditions. Find out how we contribute to an efficient community. Together, we build and preserve a quality environment.",
     imageURL: exImage("./security.jpg"),
   },
 ];
@@ -83,14 +83,14 @@ function App() {
   return (
     <>
       {/* <Header /> */}
-      <NavegationVar name={nameService} />
 
       {showMain === true && (
         <>
+        <NavegationVar name={nameService} aux={"#"}/>
           <section className="container mt-5">
             <div className="row ">
               <Home imageURL={exImage("./municipality.jpg")} />
-              <h2 className="mt-4 pt-4 text-center fw-bold text-light animate__animated animate__heartBeat">
+              <h2 className="mt-4 pt-4 text-center fw-bold text-info ">
                 Services
               </h2>
               <section className="container mt-5">
@@ -108,6 +108,9 @@ function App() {
                 </div>
               </section>
             </div>
+            <h2 className="mt-4 pt-4 text-center fw-bold text-info">
+              Our offices
+              </h2>
             <Carousel
               image1={exImage("./meetingRoom.jpg")}
               image2={exImage("./hallways.jpg")}
@@ -119,6 +122,7 @@ function App() {
 
       {showMain === false && (
         <>
+         <NavegationVar name={nameService} aux={"1"}/>
           <section className="container mt-5">
             <div className="row">
               <div className="">

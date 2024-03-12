@@ -18,7 +18,7 @@ const Form = () => {
             </label>
             <input
               type="text"
-              className="form-control"
+              className="form-control bg-secondary"
               id="identificationNumber"
               required
             />
@@ -29,7 +29,7 @@ const Form = () => {
             <label htmlFor="firstName">First name</label>
             <input
               type="text"
-              className="form-control"
+              className="form-control bg-secondary"
               id="firstName"
               required
             />
@@ -38,7 +38,7 @@ const Form = () => {
             <label htmlFor="lastName">Last name</label>
             <input
               type="text"
-              className="form-control"
+              className="form-control bg-secondary"
               id="lastName"
               required
             />
@@ -47,7 +47,7 @@ const Form = () => {
             <label htmlFor="birthdate">Birth Date</label>
             <input
               type="date"
-              className="form-control"
+              className="form-control bg-secondary"
               id="birthDate"
               required
             />
@@ -56,19 +56,19 @@ const Form = () => {
             <label htmlFor="phone" className="form-label">
               Phone Number
             </label>
-            <input type="tel" className="form-control" id="phone" required />
+            <input type="tel" className="form-control bg-secondary" id="phone" required />
           </div>
           <div className="col-md-6 mb-3">
             <label htmlFor="email" className="form-label">
               Email Address
             </label>
-            <input type="email" className="form-control" id="email" required />
+            <input type="email" className="form-control bg-secondary" id="email" required />
           </div>
           <div className="col-md-6 mb-3">
             <label htmlFor="province" className="form-label">
               Select Province
             </label>
-            <select className="form-select" required>
+            <select className="form-select bg-secondary" required>
               <option value="">...</option>
               <option value="1">San José</option>
               <option value="2">Alajuela</option>
@@ -83,7 +83,7 @@ const Form = () => {
             <label htmlFor="address" className="form-label">
               Full Address
             </label>
-            <input type="text" className="form-control" id="address" required />
+            <input type="text" className="form-control bg-secondary" id="address" required />
           </div>
         </div>
         <div className="mb-3">
@@ -91,7 +91,7 @@ const Form = () => {
             Message
           </label>
           <textarea
-            className="form-control"
+            className="form-control bg-secondary"
             id="message"
             rows="5"
             required
@@ -99,7 +99,7 @@ const Form = () => {
         </div>
         <div className="form-check">
           <input
-            className="form-check-input"
+            className="form-check-input bg-secondary"
             type="checkbox"
             value=""
             id="invalidCheck2"

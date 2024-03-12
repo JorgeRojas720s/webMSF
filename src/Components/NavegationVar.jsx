@@ -21,16 +21,17 @@ export default function NavegationVar(props) {
   return (
     <nav
       className="navbar navbar-expand-sm fixed-top"
-      style={{ background: "#176B87" }}
+      style={{ background: "#015A95" }}
     >
       <div className="container-fluid">
-        <button
+        <a
           className="nav-link active"
           onClick={() => scrollToSection("top")}
+          href={props.aux}
           aria-current="page"
         >
           <i class="fa-solid fa-house"> Home</i>
-        </button>
+        </a>
         <button
           className="navbar-toggler"
           type="button"
@@ -48,13 +49,13 @@ export default function NavegationVar(props) {
               className="nav-link"
               onClick={() => scrollToSection("medium")}
             >
-            <i class="fa-solid fa-handshake"> {props.name}</i>
+            <i class="fa-solid fa-handshake" style={{color: "#fff"}}> {props.name}</i>
             </button>
             <button
               className="nav-link"
               onClick={() => scrollToSection("bottom")}
             >
-              <i class="fa-solid fa-address-book">  Contact</i>
+              <i class="fa-solid fa-address-book" style={{color: "#fff"}}>  Contact</i>
             </button>
           </div>
         </div>
