@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
+import "./Form.css"
 
 const Form = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    alert("Form submitted successfully");
+    setIsSubmitting(true);
+
+    setTimeout(() => {
+      alert("Form submitted successfully");
+      setIsSubmitting(false);
+      window.location.href = "https://municipality-reds.netlify.app";
+    }, 2000);
   };
 
   return (
@@ -56,13 +65,23 @@ const Form = () => {
             <label htmlFor="phone" className="form-label">
               Phone Number
             </label>
-            <input type="tel" className="form-control bg-secondary" id="phone" required />
+            <input
+              type="tel"
+              className="form-control bg-secondary"
+              id="phone"
+              required
+            />
           </div>
           <div className="col-md-6 mb-3">
             <label htmlFor="email" className="form-label">
               Email Address
             </label>
-            <input type="email" className="form-control bg-secondary" id="email" required />
+            <input
+              type="email"
+              className="form-control bg-secondary"
+              id="email"
+              required
+            />
           </div>
           <div className="col-md-6 mb-3">
             <label htmlFor="province" className="form-label">
@@ -83,7 +102,12 @@ const Form = () => {
             <label htmlFor="address" className="form-label">
               Full Address
             </label>
-            <input type="text" className="form-control bg-secondary" id="address" required />
+            <input
+              type="text"
+              className="form-control bg-secondary"
+              id="address"
+              required
+            />
           </div>
         </div>
         <div className="mb-3">
@@ -106,11 +130,25 @@ const Form = () => {
             required
           />
           <label className="form-check-label" htmlFor="invalidCheck2">
-            Agree to <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">terms and conditions</a>
+            Agree to{" "}
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+              terms and conditions
+            </a>
           </label>
         </div>
-        <button type="submit" className="btn btn-primary mt-3">
-        <i className="fa-solid fa-paper-plane"> Submit</i>
+        <button
+          type="submit"
+          className={`btn btn-primary mt-3 ${isSubmitting ? "loading" : ""}`}
+          disabled={isSubmitting}
+        >
+          {isSubmitting ? (
+            <>
+              <span className="spinner" aria-hidden="true"></span>
+              Submitting
+            </>
+          ) : (
+            <i className="fa-solid fa-paper-plane"> Submit</i>
+          )}
         </button>
       </form>
     </div>
