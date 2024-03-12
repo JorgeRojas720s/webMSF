@@ -110,7 +110,7 @@ const Form = () => {
           </label>
         </div>
         <button type="submit" className="btn btn-primary mt-3">
-        <i class="fa-solid fa-paper-plane"> Submit</i>
+        <i className="fa-solid fa-paper-plane"> Submit</i>
         </button>
       </form>
     </div>

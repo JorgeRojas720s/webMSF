@@ -30,7 +30,7 @@ export default function NavegationVar(props) {
           href={props.aux}
           aria-current="page"
         >
-          <i class="fa-solid fa-house"> Home</i>
+          <i className="fa-solid fa-house" style={{color: "#000"}}> Home</i>
         </a>
         <button
           className="navbar-toggler"
@@ -49,13 +49,13 @@ export default function NavegationVar(props) {
               className="nav-link"
               onClick={() => scrollToSection("medium")}
             >
-            <i class="fa-solid fa-handshake" style={{color: "#fff"}}> {props.name}</i>
+            <i className="fa-solid fa-handshake" style={{color: "#000"}}> {props.name}</i>
             </button>
             <button
               className="nav-link"
               onClick={() => scrollToSection("bottom")}
             >
-              <i class="fa-solid fa-address-book" style={{color: "#fff"}}>  Contact</i>
+              <i className="fa-solid fa-address-book" style={{color: "#000"}}>  Contact</i>
             </button>
           </div>
         </div>

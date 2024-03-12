@@ -122,6 +122,7 @@ function App() {
 
       {showMain === false && (
         <>
+        {window.scrollTo({top: 0})}
          <NavegationVar name={nameService} aux={"1"}/>
           <section className="container mt-5">
             <div className="row">

@@ -9,11 +9,10 @@ export default function Card(props) {
         <div className="card-body">
           <h5 className="card-title text-info">{props.name}</h5>
           <p className="card-text">
-            {console.log(props.description)}
             {props.description}
           </p>
           <button  className="btn btn-primary" onClick={() => props.go(props.cardInfo)} style={{background: "#038587"}}>
-          <i class="fa-solid fa-arrow-right" > Go</i>
+          <i className="fa-solid fa-arrow-right" > Go</i>
           </button>
         </div>
       </div>
