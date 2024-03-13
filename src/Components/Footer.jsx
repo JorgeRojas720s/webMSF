@@ -28,7 +28,10 @@ export default function Footer() {
                   Helpful Links
                 </h6>
                 <p>
-                  <a href="https://www.ramrealtors.com/?gad_source=1&gclid=Cj0KCQiArrCvBhCNARIsAOkAGcW3PwHl0ZP-G0GFIGIjaLAxrVePj64xNpgKxYoEU39I5KLn52HZndwaApcbEALw_wcB" className="text-white">
+                  <a
+                    href="https://www.ramrealtors.com/?gad_source=1&gclid=Cj0KCQiArrCvBhCNARIsAOkAGcW3PwHl0ZP-G0GFIGIjaLAxrVePj64xNpgKxYoEU39I5KLn52HZndwaApcbEALw_wcB"
+                    className="text-white"
+                  >
                     Firenze Escazú
                   </a>
                 </p>
@@ -49,8 +52,11 @@ export default function Footer() {
                   </a>
                 </p>
                 <p>
-                  <a href="https://www.seguridadpublica.go.cr/" className="text-white">
-                  Public Security
+                  <a
+                    href="https://www.seguridadpublica.go.cr/"
+                    className="text-white"
+                  >
+                    Public Security
                   </a>
                 </p>
               </div>
@@ -62,7 +68,8 @@ export default function Footer() {
                   Contact
                 </h6>
                 <p>
-                  <i className="fa-solid fa-location-dot"></i> San José, Costa Rica.
+                  <i className="fa-solid fa-location-dot"></i> San José, Costa
+                  Rica.
                 </p>
                 <p>
                   <i className="fas fa-envelope mr-3 mt-2"></i>{" "}
@@ -81,10 +88,10 @@ export default function Footer() {
             <div className="row d-flex align-items-center">
               <div className="col-md-7 col-lg-8 text-center text-md-start">
                 <div className="p-3">
-                  © 2020 Derechos de autor:
-                  <a className="text-white" href="https://mdbootstrap.com/">
-                    MDBootstrap.com
-                  </a>
+                  © 2024 Derechos de autor:
+                  <label className="text-white">
+                    Jorge Rojas and Fabian Arguedas
+                  </label>
                 </div>
               </div>
 

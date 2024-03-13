@@ -66,10 +66,16 @@ const Form = () => {
               Phone Number
             </label>
             <input
-              type="tel"
+              type="number"
               className="form-control bg-secondary"
               id="phone"
               required
+              style={{
+                WebkitAppearance: 'none',
+                MozAppearance: 'textfield',
+                appearance: 'textfield',
+                margin: 0
+            }}
             />
           </div>
           <div className="col-md-6 mb-3">
