@@ -11,7 +11,6 @@ const Form = () => {
     setTimeout(() => {
       alert("Form submitted successfully");
       setIsSubmitting(false);
-      window.location.href = "https://municipality-reds.netlify.app";
     }, 2000);
   };
 
